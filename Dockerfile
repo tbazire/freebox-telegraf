@@ -5,3 +5,5 @@ RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3 get-pip.py --prefix=/usr/local
 RUN python3 -m pip install requests
 RUN pip install unidecode
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["telegraf"]
