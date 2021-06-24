@@ -1,4 +1,4 @@
-FROM telegraf:latest
+FROM arm64v8\telegraf:latest
 RUN apt-get update && apt-get upgrade && dpkg --configure -a
 RUN apt-get install -y --no-install-recommends apt-transport-https ca-certificates curl gnupg-agent software-properties-common python3-distutils
 RUN wget https://bootstrap.pypa.io/get-pip.py
